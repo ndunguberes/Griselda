@@ -2,6 +2,7 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
+--
 -- Host: 127.0.0.1
 -- Generation Time: Jan 15, 2026 at 11:46 AM
 -- Server version: 10.4.32-MariaDB
