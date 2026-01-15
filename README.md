@@ -35,7 +35,3 @@ The database, named `musicdb`, consists of 7 core tables designed to track the l
 * **Server Version:** 10.4.32-MariaDB.
 * **Default Character Set:** `utf8mb4`.
 * **Engine:** InnoDB (Supports ACID transactions).
-
----
-
-Would you like me to create a **Python script** or **Node.js** file that connects to this specific database to perform a basic sale?
