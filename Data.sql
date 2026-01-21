@@ -21,9 +21,36 @@ SET time_zone = "+00:00";
 --
 -- Database: `griselda_musicdb`
 --
-DROP DATABASE IF EXISTS `griselda_musicdb`;
-CREATE DATABASE IF NOT EXISTS `griselda_musicdb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+-- DROP DATABASE IF EXISTS `griselda_musicdb`;
+-- CREATE DATABASE IF NOT EXISTS `griselda_musicdb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `griselda_musicdb`;
+
+--
+-- Dumping data for table `artists`
+--
+
+INSERT INTO `artists` (`ArtistID`, `Name`, `Country`) VALUES
+(1, 'Pink Floyd', 'UK'),
+(2, 'The Beatles', 'UK'),
+(3, 'Led Zeppelin', 'UK'),
+(4, 'Nirvana', 'USA'),
+(5, 'Fleetwood Mac', 'UK/USA'),
+(6, 'Daft Punk', 'France'),
+(7, 'Miles Davis', 'USA'),
+(8, 'Radiohead', 'UK'),
+(9, 'Kendrick Lamar', 'USA'),
+(10, 'Taylor Swift', 'USA'),
+(11, 'Black Sabbath', 'UK'),
+(12, 'Abba', 'Sweden'),
+(13, 'Tame Impala', 'Australia'),
+(14, 'Arctic Monkeys', 'UK'),
+(15, 'Amy Winehouse', 'UK'),
+(16, 'Metallica', 'USA'),
+(17, 'Queen', 'UK'),
+(18, 'The Cure', 'UK'),
+(19, 'Wu-Tang Clan', 'USA'),
+(20, 'Joni Mitchell', 'Canada'),
+(21, 'David Bowie', 'UK');
 
 --
 -- Dumping data for table `albums`
@@ -52,33 +79,6 @@ INSERT INTO `albums` (`AlbumID`, `ArtistID`, `Title`, `ReleaseYear`, `Label`) VA
 (20, 18, 'Disintegration', 1989, 'Fiction'),
 (21, 19, 'Enter the Wu-Tang', 1993, 'Loud'),
 (22, 20, 'Blue', 1971, 'Reprise');
-
---
--- Dumping data for table `artists`
---
-
-INSERT INTO `artists` (`ArtistID`, `Name`, `Country`) VALUES
-(1, 'Pink Floyd', 'UK'),
-(2, 'The Beatles', 'UK'),
-(3, 'Led Zeppelin', 'UK'),
-(4, 'Nirvana', 'USA'),
-(5, 'Fleetwood Mac', 'UK/USA'),
-(6, 'Daft Punk', 'France'),
-(7, 'Miles Davis', 'USA'),
-(8, 'Radiohead', 'UK'),
-(9, 'Kendrick Lamar', 'USA'),
-(10, 'Taylor Swift', 'USA'),
-(11, 'Black Sabbath', 'UK'),
-(12, 'Abba', 'Sweden'),
-(13, 'Tame Impala', 'Australia'),
-(14, 'Arctic Monkeys', 'UK'),
-(15, 'Amy Winehouse', 'UK'),
-(16, 'Metallica', 'USA'),
-(17, 'Queen', 'UK'),
-(18, 'The Cure', 'UK'),
-(19, 'Wu-Tang Clan', 'USA'),
-(20, 'Joni Mitchell', 'Canada'),
-(21, 'David Bowie', 'UK');
 
 --
 -- Dumping data for table `customers`
