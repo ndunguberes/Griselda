@@ -2,11 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
---
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2026 at 11:46 AM
+-- Generation Time: Jan 21, 2026 at 10:34 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -21,36 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `griselda_musicdb`
 --
--- DROP DATABASE IF EXISTS `griselda_musicdb`;
--- CREATE DATABASE IF NOT EXISTS `griselda_musicdb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `griselda_musicdb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `griselda_musicdb`;
-
---
--- Dumping data for table `artists`
---
-
-INSERT INTO `artists` (`ArtistID`, `Name`, `Country`) VALUES
-(1, 'Pink Floyd', 'UK'),
-(2, 'The Beatles', 'UK'),
-(3, 'Led Zeppelin', 'UK'),
-(4, 'Nirvana', 'USA'),
-(5, 'Fleetwood Mac', 'UK/USA'),
-(6, 'Daft Punk', 'France'),
-(7, 'Miles Davis', 'USA'),
-(8, 'Radiohead', 'UK'),
-(9, 'Kendrick Lamar', 'USA'),
-(10, 'Taylor Swift', 'USA'),
-(11, 'Black Sabbath', 'UK'),
-(12, 'Abba', 'Sweden'),
-(13, 'Tame Impala', 'Australia'),
-(14, 'Arctic Monkeys', 'UK'),
-(15, 'Amy Winehouse', 'UK'),
-(16, 'Metallica', 'USA'),
-(17, 'Queen', 'UK'),
-(18, 'The Cure', 'UK'),
-(19, 'Wu-Tang Clan', 'USA'),
-(20, 'Joni Mitchell', 'Canada'),
-(21, 'David Bowie', 'UK');
 
 --
 -- Dumping data for table `albums`
@@ -79,6 +50,33 @@ INSERT INTO `albums` (`AlbumID`, `ArtistID`, `Title`, `ReleaseYear`, `Label`) VA
 (20, 18, 'Disintegration', 1989, 'Fiction'),
 (21, 19, 'Enter the Wu-Tang', 1993, 'Loud'),
 (22, 20, 'Blue', 1971, 'Reprise');
+
+--
+-- Dumping data for table `artists`
+--
+
+INSERT INTO `artists` (`ArtistID`, `Name`, `Country`) VALUES
+(1, 'Pink Floyd', 'UK'),
+(2, 'The Beatles', 'UK'),
+(3, 'Led Zeppelin', 'UK'),
+(4, 'Nirvana', 'USA'),
+(5, 'Fleetwood Mac', 'UK/USA'),
+(6, 'Daft Punk', 'France'),
+(7, 'Miles Davis', 'USA'),
+(8, 'Radiohead', 'UK'),
+(9, 'Kendrick Lamar', 'USA'),
+(10, 'Taylor Swift', 'USA'),
+(11, 'Black Sabbath', 'UK'),
+(12, 'Abba', 'Sweden'),
+(13, 'Tame Impala', 'Australia'),
+(14, 'Arctic Monkeys', 'UK'),
+(15, 'Amy Winehouse', 'UK'),
+(16, 'Metallica', 'USA'),
+(17, 'Queen', 'UK'),
+(18, 'The Cure', 'UK'),
+(19, 'Wu-Tang Clan', 'USA'),
+(20, 'Joni Mitchell', 'Canada'),
+(21, 'David Bowie', 'UK');
 
 --
 -- Dumping data for table `customers`
@@ -111,28 +109,28 @@ INSERT INTO `customers` (`CustomerID`, `FirstName`, `LastName`, `Email`, `Shippi
 --
 
 INSERT INTO `inventory` (`SKU`, `AlbumID`, `Format`, `Condition_Status`, `Price`, `StockQuantity`, `Weight_Grams`) VALUES
-(1, 1, 'Vinyl', 'New', 34.99, 15, 500),
-(2, 1, 'CD', 'New', 12.99, 20, 100),
-(3, 2, 'Vinyl', 'Used', 45.00, 2, 600),
-(4, 3, 'Vinyl', 'New', 29.99, 10, 500),
-(5, 4, 'Vinyl', 'New', 25.50, 8, 480),
+(1, 1, 'Vinyl', 'New', 34.99, 14, 500),
+(2, 1, 'CD', 'New', 12.99, 18, 100),
+(3, 2, 'Vinyl', 'Used', 45.00, 1, 600),
+(4, 3, 'Vinyl', 'New', 29.99, 9, 500),
+(5, 4, 'Vinyl', 'New', 25.50, 7, 480),
 (6, 4, 'Cassette', 'New', 15.00, 5, 60),
-(7, 5, 'Vinyl', 'New', 32.00, 25, 500),
-(8, 6, 'Vinyl', 'New', 38.00, 12, 550),
-(9, 7, 'Vinyl', 'New', 42.00, 10, 550),
-(10, 8, 'CD', 'Used', 8.50, 15, 100),
-(11, 9, 'Vinyl', 'New', 30.00, 10, 500),
+(7, 5, 'Vinyl', 'New', 32.00, 24, 500),
+(8, 6, 'Vinyl', 'New', 38.00, 11, 550),
+(9, 7, 'Vinyl', 'New', 42.00, 9, 550),
+(10, 8, 'CD', 'Used', 8.50, 12, 100),
+(11, 9, 'Vinyl', 'New', 30.00, 9, 500),
 (12, 10, 'Vinyl', 'New', 45.00, 6, 520),
-(13, 11, 'Vinyl', 'New', 39.99, 20, 500),
-(14, 11, 'Cassette', 'New', 18.00, 4, 60),
-(15, 12, 'Vinyl', 'Used', 20.00, 3, 480),
-(16, 13, 'Vinyl', 'New', 28.00, 14, 500),
-(17, 14, 'CD', 'New', 14.00, 30, 100),
-(18, 15, 'Vinyl', 'New', 31.00, 9, 500),
-(19, 16, 'Vinyl', 'New', 27.50, 11, 480),
-(20, 17, 'Box Set', 'New', 85.00, 3, 1200),
-(21, 18, 'Vinyl', 'New', 33.00, 7, 500),
-(22, 19, 'Vinyl', 'New', 36.00, 5, 500);
+(13, 11, 'Vinyl', 'New', 39.99, 19, 500),
+(14, 11, 'Cassette', 'New', 18.00, 2, 60),
+(15, 12, 'Vinyl', 'Used', 20.00, 2, 480),
+(16, 13, 'Vinyl', 'New', 28.00, 13, 500),
+(17, 14, 'CD', 'New', 14.00, 29, 100),
+(18, 15, 'Vinyl', 'New', 31.00, 8, 500),
+(19, 16, 'Vinyl', 'New', 27.50, 10, 480),
+(20, 17, 'Box Set', 'New', 85.00, 2, 1200),
+(21, 18, 'Vinyl', 'New', 33.00, 6, 500),
+(22, 19, 'Vinyl', 'New', 36.00, 4, 500);
 
 --
 -- Dumping data for table `sales`
