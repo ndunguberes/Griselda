@@ -117,6 +117,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
 --
 -- Constraints for table `albums`
 --
+--
 ALTER TABLE `albums`
   ADD CONSTRAINT `albums_ibfk_1` FOREIGN KEY (`ArtistID`) REFERENCES `artists` (`ArtistID`);
 
