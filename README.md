@@ -1,6 +1,4 @@
 
----
-
 # 🎼 MusicDB: Physical Store Management System
 
 A relational database backend designed to manage a physical music store's inventory, customer base, and sales transactions. This project utilizes **MariaDB/MySQL** to ensure data integrity through foreign key constraints and normalized table structures.
